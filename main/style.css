@@ -1,0 +1,331 @@
+/* style.css */
+
+
+
+
+/* [ FONTS ] 
+ * 01. hanna (Korean)
+ * 02. Alex Brush
+ * 03. Pacifico
+ */
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+@import url(https://fonts.googleapis.com/css?family=Alex+Brush);
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+/* [ SCREEN SIZE ] */
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.section-wrapper {
+	height: 100%;
+}
+
+.full-page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+
+/* [ SCREEN COLOR ] */
+.background-color-black {
+	background-color: #292929;
+}
+
+.background-color-green {
+	background-color: lightgreen;
+}
+
+.background-color-yellow {
+	background-color: lightyellow;
+}
+
+.background-color-blue {
+	background-color: lightblue;
+}
+
+.background-color-red {
+	background-color: red;
+}
+
+.background-color-purple {
+	background-color: purple;
+}
+
+.background-color-aqua {
+	background-color: aqua;
+}
+
+
+/* [ TOP BUTTON ] */
+.top-button {
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	z-index: 1000;
+}
+
+.top-button-hide {
+	display: none;
+}
+
+.top-button-style {
+	padding: 0;
+}
+
+
+/* [ INTRODUCE PAGE ] */
+.introduce-title {
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: 0;
+}
+
+.introduce-title-content {
+	position: absolute;
+	top: 35%;
+	text-align: center;
+	width: 100%;
+	font-family: 'Pacifico', cursive;
+	font-size: 10em;
+}
+
+.introduce-content {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	left: 50%;
+}
+
+.introduce-content-text {
+	padding: 10%;
+	word-break: break-all;
+	font-family: 'Pacifico', cursive;
+	font-size: 2em;
+}
+
+
+/* [ ALIGNING ] */
+.vertical-container {
+	height: 100%;
+	display: -webkit-flex;
+  	display:         flex;
+	-webkit-align-items: center;
+    align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+
+/* [ NAVIGATION TAG w/ desktop & laptop] */
+
+@media screen and (min-width: 768px) {
+
+	.overlay-button {
+		display: none;
+	}
+
+	.sidenav {
+		display: none;
+	}
+
+	.navigation-tag-position {
+		overflow: auto;
+		position: absolute;
+		bottom: 10%;
+	}
+
+	.navigation-style {
+		text-decoration: none;
+		font-family: 'Hanna', serif;
+		color: #f7484e;
+		font-size: 2em;
+	}
+
+	a.navigation-style:hover,
+	a.navigation-style:active {
+		text-decoration: underline;
+		color: white;
+	}
+}
+
+
+/* [ NAVIGATION TAG w/ phone] */
+
+@media screen and (max-width: 768px) {
+
+	.overlay-button {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		font-size: 30px;
+		color: white;
+		z-index: 1;
+	}
+
+	.sidenav {
+	    height: 100%;
+	    width: 0;
+	    position: fixed;
+	    z-index: 2;
+	    top: 0;
+	    left: 0;
+	    background-color: #111;
+	    overflow-x: hidden;
+	    transition: 0.5s;
+	    padding-top: 60px;
+	}
+
+	.sidenav a {
+	    padding: 8px 8px 8px 32px;
+	    transition: 0.3s;
+	    text-decoration: none;
+		font-family: 'Hanna', serif;
+		color: #f7484e;
+		font-size: 2em;
+		display: block;
+	}
+
+	.sidenav a:hover {
+		text-decoration: underline;
+		color: white;		
+	}
+
+	.offcanvas a:focus{
+	    color: #f1f1f1;
+	}
+
+	.sidenav .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	    color: white;
+	}
+
+	.navigation-tag-position {
+		display: none;
+	}
+
+}
+
+
+/* [ SVG ] */
+
+.drawsvg,svg {
+	width: 100%;
+	height: 300px
+}
+
+.stroke {
+	stroke: white; /* Logo Color (Line) */
+	stroke-width: 1px;
+	stroke-dasharray: 0 250;
+	stroke-opacity: 1;
+	fill: none;
+	-webkit-animation:
+	stroke_offset 8s infinite;
+	animation: stroke_offset 8s infinite;
+	-webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+	animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+}
+
+@-webkit-keyframes stroke_offset {
+	100%, 25% {
+		stroke-dasharray: 0 250;
+		stroke-opacity: 1;
+	}
+	50%, 75% {
+		stroke-dasharray: 250 0;
+		stroke-opacity: .75;
+	} 55%, 70% {
+		stroke-dasharray: 250 0;
+		stroke-opacity: 0;
+	}
+}
+
+@keyframes stroke_offset {
+	100%, 25% {
+		stroke-dasharray: 0 250;
+		 stroke-opacity: 1;
+	}
+	50%, 75% {
+		stroke-dasharray: 250 0;
+		stroke-opacity: .75;
+	} 
+	55%, 70% {
+		stroke-dasharray: 250 0;
+		stroke-opacity: 0;
+	} 
+} 
+
+.fill {
+	fill: white; /* Logo color */
+	fill-opacity: 0;
+	-webkit-animation: fill_offset 8s infinite;
+	animation: fill_offset 8s infinite;
+	-webkit-animation-timing-function: cubic-bezier(.25, .46, .45, .94);
+	animation-timing-function: cubic-bezier(.25, .46, .45, .94)
+}
+
+@-webkit-keyframes fill_offset {
+	100%, 25%, 35%, 90% {
+		fill-opacity: 0;
+	}
+	50%, 70% {
+		fill-opacity: 1;
+	}
+}
+
+@keyframes fill_offset {
+	100%, 25%, 35%, 90% {
+		fill-opacity: 0;
+	}
+	50%, 70% {
+		fill-opacity: 1;
+	}
+}
+
+#fade-text {
+	font-family: 'Alex Brush', cursive;
+	font-size: 5em;
+}
+
+
+/* [ MENU ] */
+.menu-position {
+	position: fixed;
+	z-index: 30;
+	right: 3%;
+	left: auto;
+	top: 5%;
+}
+
+
+
+
+
+
+
+.cycle-slideshow {
+	display: block;
+}
+
+.cycle-slideshow img {
+	min-width: 70%;
+	max-width: 100%;
+	height: auto;
+}
+
+.picture-button-position {
+	overflow: auto;
+	position: absolute;
+	bottom: 10%;
+}
