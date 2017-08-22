@@ -14,18 +14,22 @@
 
 
 /* [ SCREEN SIZE ] */
-
 html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
+.site-wrapper {
+	height: 100%;
+	overflow: auto;
+}
+
 .section-wrapper {
 	height: 100%;
 }
 
-.full-page {
+.full-page-section {
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -62,55 +66,6 @@ html, body {
 }
 
 
-/* [ TOP BUTTON ] */
-.top-button {
-	position: fixed;
-	right: 5%;
-	bottom: 5%;
-	z-index: 1000;
-}
-
-.top-button-hide {
-	display: none;
-}
-
-.top-button-style {
-	padding: 0;
-}
-
-
-/* [ INTRODUCE PAGE ] */
-.introduce-title {
-	position: absolute;
-	height: 100%;
-	width: 50%;
-	left: 0;
-}
-
-.introduce-title-content {
-	position: absolute;
-	top: 35%;
-	text-align: center;
-	width: 100%;
-	font-family: 'Pacifico', cursive;
-	font-size: 10em;
-}
-
-.introduce-content {
-	position: relative;
-	height: 100%;
-	width: 50%;
-	left: 50%;
-}
-
-.introduce-content-text {
-	padding: 10%;
-	word-break: break-all;
-	font-family: 'Pacifico', cursive;
-	font-size: 2em;
-}
-
-
 /* [ ALIGNING ] */
 .vertical-container {
 	height: 100%;
@@ -123,8 +78,107 @@ html, body {
 }
 
 
-/* [ NAVIGATION TAG w/ desktop & laptop] */
+/* [ INTRODUCE PAGE (For Desktop & Laptop) ] */
+@media screen and (min-width: 768px) {
+	.full-page-section-introduce{
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
 
+	.introduce-title {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		left: 0;
+	}
+
+	.introduce-title-content {
+		position: absolute;
+		top: 35%;
+		text-align: center;
+		width: 100%;
+		font-family: 'Pacifico', cursive;
+		font-size: 10em;
+	}
+
+	.introduce-content {
+		position: relative;
+		height: 100%;
+		width: 50%;
+		left: 50%;
+	}
+
+	.introduce-content-text {
+		padding: 10%;
+		word-break: break-all;
+		font-family: 'Pacifico', cursive;
+		font-size: 2em;
+	}
+}
+
+
+/* [ INTRODUCE PAGE (For Mobile) ] */
+@media screen and (max-width: 768px) {
+	.full-page-section-introduce{
+		position: relative;
+		width: 100%;
+		height: 200%;
+	}
+
+	.introduce-title {
+		position: relative;
+		height: 50%;
+	}
+
+	.introduce-title-content {
+		position: absolute;
+		top: 35%;
+		text-align: center;
+		font-family: 'Pacifico', cursive;
+		width: 100%;
+		font-size: 10em;
+	}
+
+	.introduce-content {
+		position: relative;
+		height: 50%;
+	}
+
+	.introduce-content-text {
+		padding: 10%;
+		word-break: break-all;
+		font-family: 'Pacifico', cursive;
+		font-size: 2em;
+	}
+}
+
+
+/* [ TOP BUTTON ] */
+.top-button {
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	z-index: 1000;
+}
+
+.top-button-style {
+	padding: 0;
+}
+
+
+/* [ MENU ] */
+.menu-position {
+	position: fixed;
+	top: 30px;
+	left: 60px;
+	font-size: 30px;
+	color: white;
+	z-index: 1;
+}
+
+
+/* [ NAVIGATION TAG w/ desktop & laptop] */
 @media screen and (min-width: 768px) {
 
 	.overlay-button {
@@ -157,12 +211,11 @@ html, body {
 
 
 /* [ NAVIGATION TAG w/ phone] */
-
 @media screen and (max-width: 768px) {
 
 	.overlay-button {
 		position: fixed;
-		top: 20px;
+		top: 30px;
 		left: 20px;
 		font-size: 30px;
 		color: white;
@@ -173,7 +226,7 @@ html, body {
 	    height: 100%;
 	    width: 0;
 	    position: fixed;
-	    z-index: 2;
+	    z-index: 50;
 	    top: 0;
 	    left: 0;
 	    background-color: #111;
@@ -218,7 +271,6 @@ html, body {
 
 
 /* [ SVG ] */
-
 .drawsvg,svg {
 	width: 100%;
 	height: 300px
@@ -299,21 +351,7 @@ html, body {
 }
 
 
-/* [ MENU ] */
-.menu-position {
-	position: fixed;
-	z-index: 30;
-	right: 3%;
-	left: auto;
-	top: 5%;
-}
-
-
-
-
-
-
-
+/* [ IMAGE SLIDE ] */
 .cycle-slideshow {
 	display: block;
 }
@@ -324,8 +362,13 @@ html, body {
 	height: auto;
 }
 
+.picture-position {
+	text-align: center;
+	padding-top: 170px;
+}
+
 .picture-button-position {
-	overflow: auto;
-	position: absolute;
+	padding-top: 30px;
 	bottom: 10%;
+	display: inline-block;
 }
