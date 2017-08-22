@@ -1,0 +1,116 @@
+/* project_projectBoard.css */
+
+
+
+html, body{
+	height: 100%;
+}
+
+.site-wrapper{
+	height: 100%;
+}
+
+.main{
+	background-color: lightgreen;
+	height: 100%;
+	padding-top: 100px;
+}
+
+.project-board{
+	background-color: lightblue;
+	width: 70%;
+	height: 90%;
+	float: none;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.project-board-title{
+	background-color: lightcoral;
+}
+
+.project-list{
+	list-style-type: none;
+	width: 100%;
+	padding: 0 0 0 16px;
+}
+
+.project-list li{
+	margin: 0;
+	padding: 0;
+	float: left;
+	background-color: lightcoral;
+	width: 20%;
+	min-width: 100px;
+	padding-right: 16px;
+	padding-bottom: 30px;
+}
+
+.project{
+	position: relative;
+	display: block;
+	width: 100%;
+	border: 1px solid #d8d8d8;
+	border-radius: 5px;
+	background: #fff;
+	height: 119px;
+}
+
+.project-title{
+	background-color: lightblue;
+	width: 33.3333%;
+	float: none;
+	margin: 0 auto 10px auto;
+
+	text-align: center;
+}
+
+.project-date{
+	background-color: beige;
+}
+
+
+
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.haha {
+	background-color: lightcoral;
+	position: fixed;
+	right: 5%;
+	top: 5%;
+	z-index: 1;
+}
