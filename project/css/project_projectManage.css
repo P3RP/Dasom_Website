@@ -1,0 +1,146 @@
+/* project_projectManage.css */
+
+
+/* [ CHECK ] */
+.check-button {
+	background-color: lightblue;
+}
+
+
+/* [ SCREENSIZE ] */
+html, body {
+	height: 100%;
+}
+
+.header-setting {
+	position: relative;
+	height: 5%;
+	padding: 5px;
+	background-color: lightgreen;
+}
+
+.content-setting {
+	height: 95%;
+	transition: 0.5s;
+	width: 80%;
+}
+
+
+/* [ HEADER ] */
+.project-button {
+	position: absolute;
+	padding-left: 5px;
+	left: 0;
+}
+
+.plus-button {
+	position: absolute;
+	left: 10%;
+}
+
+.site-title {
+	position: absolute;
+	left: 50%;
+}
+
+.login-info-button {
+	position: absolute;
+	right: 0;
+	padding-right: 5px;
+}
+
+
+/* [ MAIN CONTENT ] */
+.main-content {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.manage-header {
+	position: relative;
+	height: 5%;
+	padding: 10px;
+	background-color: lightyellow;
+}
+
+/* < MANAGE CONSOLE > */
+.manage-console {
+	position: relative;
+	height: 95%;
+	background-color: pink;
+}
+
+.sub-category {
+	display: block;
+	position: relative;
+}
+
+.sub-category-title {
+	margin: 0 10px;
+	background-color: lightblue;
+}
+
+.sub-category-content {
+	position: relative;
+	list-style-type: none;
+	width: 100%;
+}
+
+.sub-category-content li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background-color: lightcoral;
+	width: 20%;
+	min-width: 100px;
+	padding-right: 16px;
+	padding-bottom: 30px;
+}
+
+
+/* < SIDEMENU > */
+.sidemenu-open-button {
+	position: fixed;
+	height: 95%;
+	bottom: 0;
+	right: 0;
+	background-color: lightblue;
+}
+
+
+/* [ SIDEBAR ] */
+.sidemenu {
+	height: 95%;
+	position: fixed;
+	width: 20%;
+	z-index: 2;
+	bottom: 0;
+	right: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+
+.sidemenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidemenu a:hover, .offcanvas a:focus{
+	color: #f1f1f1;
+}
+
+.sidemenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+

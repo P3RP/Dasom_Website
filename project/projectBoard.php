@@ -1,11 +1,13 @@
 <!-- projectBoard.php -->
 
 <!DOCTYPE html>
+
 <html lang="ko">
+
 <head>
 
 	<!-- Title -->
-	<title>Dasom | Project</title>
+	<title>Project Board | Dasom</title>
 
 	<!-- Meta Data -->
 	<meta charset="utf-8">
@@ -20,13 +22,71 @@
 
 
 	<script>
-		function openNav() {
-		    document.getElementById("mySidenav").style.width = "250px";
+
+		function dropdown_menu() {
+		    document.getElementById("myDropdown").classList.toggle("show");
 		}
 
-		function closeNav() {
-		    document.getElementById("mySidenav").style.width = "0";
+		// Close the dropdown if the user clicks outside of it
+		window.onclick = function(event) {
+		  if (!event.target.matches('.dropbtn')) {
+
+		    var dropdowns = document.getElementsByClassName("dropdown-content");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+		      var openDropdown = dropdowns[i];
+		      if (openDropdown.classList.contains('show')) {
+		        openDropdown.classList.remove('show');
+		      }
+		    }
+		  }
 		}
+
+	</script>
+
+	<script type="text/javascript">
+
+		function open_title_section() {
+			document.getElementById("project-title-write").style.display = "block";
+		}
+
+		function close_title_section() {
+			document.getElementById("project-title-write").style.display = "none";
+			document.getElementById('title-place').value = "";
+		}
+
+		function create_project(pos) {
+			var date = new Date();
+
+			var year  = date.getFullYear();
+			var month = date.getMonth() + 1;
+			var day   = date.getDate();
+
+			if (("" + month).length == 1) {
+				month = "0" + month;
+			}
+			if (("" + day).length   == 1) {
+				day   = "0" + day;
+			}
+			
+			if(document.getElementById('title-place').value!="") {
+				var project_text = "<li><div class='project'><div class='project-title'>";
+				project_text += document.getElementById('title-place').value;
+				project_text += "</div><div class='project-date'>";
+
+				project_text += year + "-";
+				project_text += month + "-";
+				project_text +=	day;
+
+				project_text += "</div></div></li>";
+
+				$(pos).append(project_text);
+
+				document.getElementById("project-title-write").style.display = "none";
+				document.getElementById('title-place').value = "";
+			}
+		}
+
 	</script>
 
 
@@ -36,17 +96,22 @@
 	<!-- Site Wrapper -->
 	<div class="site-wrapper">
 		
-		<div id="mySidenav" class="sidenav">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		  <a href="#">About</a>
-		  <a href="#">Services</a>
-		  <a href="#">Clients</a>
-		  <a href="#">Contact</a>
-		</div>
-
 		<!-- Slide Menu -->
-		<div class="menu">
-			<span onclick="openNav()" class="haha">&#9776; open</span>
+		<div class="dropdown">
+			<button onclick="dropdown_menu()" class="dropbtn">
+
+				<div class="menu-button"></div>
+				<div class="menu-button"></div>
+				<div class="menu-button"></div>
+
+			</button>
+
+			<div id="myDropdown" class="dropdown-content">
+				<a href="javascript:open_title_section()">Create New Project</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</div>
+
 		</div>
 
 		<!-- Main Page -->
@@ -57,166 +122,35 @@
 				
 				<!-- Project Board Title -->
 				<div class="project-board-title">
-					<h1>Project</h1>
+
+					<div>
+						<h1>Personal Project</h1>
+					</div>
+
 				</div>
 
 				<!-- Project List -->
 				<ul class="project-list">
 
 					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
+
+						<div class="project-create-button" onclick="open_title_section()">+</div>
+
+						<div class="project-title-write-style" id="project-title-write">
+
+							<div class="project-title-write-content">
+
+								<div class="close-button" onclick="close_title_section()">×</div>
+
+								<label for="title-place">Title</label>
+								<input type="text" class="title-place-style" id="title-place" placeholder="Title">
+
+								<input type="button" onclick="create_project('.project-list')" value="Create" class="create-active-button">
+
 							</div>
 
-							<div class="project-date">
-								Date
-							</div>
 						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="project">
-							<div class="project-title">
-								Title
-							</div>
-
-							<div class="project-date">
-								Date
-							</div>
-						</div>
+						
 					</li>
 
 				</ul>

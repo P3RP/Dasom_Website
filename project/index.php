@@ -1,3 +1,5 @@
+<!-- index.php -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -48,7 +50,7 @@
 				</div>
 
 				<div class="">
-					<a type="button" class="btn btn-primary" href="./projectList.php">LOGIN</a>
+					<a type="button" class="btn btn-primary" href="./projectBoard.php">LOGIN</a>
 				</div>
 			</section>
 
