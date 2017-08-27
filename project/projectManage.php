@@ -28,9 +28,25 @@
 		}
 
 		function close_nav() {
-		    document.getElementById("sidebar").style.width = "0";
-		    document.getElementById("content").style.width = "100%";
+		    document.getElementById("sidebar").style.width = "0%";
+		    document.getElementById("content").style.width = "98%";
 		}
+	</script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			$(".main-category-title").click(function(){
+				$(this).next("ul").slideToggle();
+			});
+		});
+
+		$(document).ready(function(){
+			$(".sub-category-title").click(function(){
+				$(this).next("ul").slideToggle();
+			});
+		});
+
 	</script>
 
 </head>
@@ -40,23 +56,23 @@
 	<div id="header" class="header-setting">
 		
 		<!-- Project Button -->
-		<div class="project-button check-button">
-			<a href="" type="button">project</a>
+		<div class="project-button">
+			<a href="" type="button">Project</a>
 		</div>
 
 		<!-- Plus Button -->
-		<div class="plus-button check-button">
+		<div class="plus-button">
 			<a href="" type="button">+</a>
 		</div>
 
 		<!-- Site Title -->
-		<div class="site-title check-button">
-			<a href="">title</a>
+		<div class="site-title">
+			<a href="">Title</a>
 		</div>
 
 		<!-- Login Info Button -->
-		<div class="login-info-button check-button">
-			<a href="" type="button">login</a>
+		<div class="login-info-button">
+			<a href="" type="button">L</a>
 		</div>
 
 	</div>
@@ -64,11 +80,10 @@
 	<!-- Site Content -->
 	<div id="content" class="content-setting">
 
-		<!-- Sidebar Menu -->
 		<div class="main-content">
 
-			<!-- Manage Console Header -->
-			<div class="manage-header">
+			<!-- Manage Console -->
+			<div class="manage-console">
 
 				<!-- Project Title -->
 				<div class="project-title">
@@ -76,20 +91,22 @@
 				</div>
 
 				<!-- Search -->
-				<div class="search">
-					Search
-				</div>
-			
-			</div>
+				<input type="text" name="search" value="" class="search-style" placeholder="Search">
 
-			<!-- Manage Console -->
-			<div class="manage-console">
+				<!-- Search Button -->
+				<button class="search-style">
+					<span class="glyphicon glyphicon-search btn-style"></span>
+				</button>
 				
 				<!-- Main Category -->
-				<div class="main-category">
+				<div class="main-category-title">
+					Category Title
+				</div>
+
+				<ul class="main-category">
 
 					<!-- Sub Category -->
-					<div id="sub-category-board" class="sub-category">
+					<li id="sub-category-board" class="sub-category">
 
 						<div class="sub-category-title">
 							board
@@ -109,11 +126,31 @@
 								ddsdsdsdsdsd
 							</li>
 
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
 						</ul>
 						
-					</div>
+					</li>
 
-					<div id="sub-category-overdued" class="sub-category">
+					<li id="sub-category-overdued" class="sub-category">
 
 						<div class="sub-category-title">
 							overdued	
@@ -121,11 +158,43 @@
 
 						<ul class="sub-category-content">
 							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
 						</ul>
 						
-					</div>
+					</li>
 
-					<div id="sub-category-unfinished" class="sub-category">
+					<li id="sub-category-unfinished" class="sub-category">
 
 						<div class="sub-category-title">
 							unfinished
@@ -133,11 +202,43 @@
 
 						<ul class="sub-category-content">
 							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
 						</ul>
 					
-					</div>
+					</li>
 
-					<div id="sub-category-finished" class="sub-category">
+					<li id="sub-category-finished" class="sub-category">
 
 						<div class="sub-category-title">
 							finished
@@ -145,11 +246,230 @@
 
 						<ul class="sub-category-content">
 							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
 						</ul>
 						
-					</div>
+					</li>
 					
+				</ul>
+
+
+				<!-- Main Category -->
+				<div class="main-category-title">
+					Category Title
 				</div>
+
+				<ul class="main-category">
+
+					<!-- Sub Category -->
+					<li id="sub-category-board" class="sub-category">
+
+						<div class="sub-category-title">
+							Board
+						</div>
+
+						<ul class="sub-category-content">
+							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+						</ul>
+						
+					</li>
+
+					<li id="sub-category-overdued" class="sub-category">
+
+						<div class="sub-category-title">
+							Overdued	
+						</div>
+
+						<ul class="sub-category-content">
+							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+						</ul>
+						
+					</li>
+
+					<li id="sub-category-unfinished" class="sub-category">
+
+						<div class="sub-category-title">
+							unfinished
+						</div>
+
+						<ul class="sub-category-content">
+							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+						</ul>
+					
+					</li>
+
+					<li id="sub-category-finished" class="sub-category">
+
+						<div class="sub-category-title">
+							finished
+						</div>
+
+						<ul class="sub-category-content">
+							
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+							<li>
+								ddsdsdsdsdsd
+							</li>
+
+						</ul>
+						
+					</li>
+					
+				</ul>
 
 			</div>
 
