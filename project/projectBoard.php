@@ -47,11 +47,11 @@
 	<script type="text/javascript">
 
 		function open_title_section() {
-			document.getElementById("project-title-write").style.display = "block";
+			document.getElementById("project-about-write").style.display = "block";
 		}
 
 		function close_title_section() {
-			document.getElementById("project-title-write").style.display = "none";
+			document.getElementById("project-about-write").style.display = "none";
 			document.getElementById('title-place').value = "";
 		}
 
@@ -72,8 +72,9 @@
 			if(document.getElementById('title-place').value!="") {
 				var project_text = "<li><div class='project'><div class='project-title'>";
 				project_text += document.getElementById('title-place').value;
+				project_text += "</div><div class='project-explain'>";
+				project_text += document.getElementById('explain-place').value;
 				project_text += "</div><div class='project-date'>";
-
 				project_text += year + "-";
 				project_text += month + "-";
 				project_text +=	day;
@@ -82,8 +83,9 @@
 
 				$(pos).append(project_text);
 
-				document.getElementById("project-title-write").style.display = "none";
+				document.getElementById("project-about-write").style.display = "none";
 				document.getElementById('title-place').value = "";
+				document.getElementById('explain-place').value = "";
 			}
 		}
 
@@ -92,6 +94,11 @@
 
 </head>
 <body>
+
+	<!-- Mobile Warning -->
+	<div class="mobile-warning">
+		You can't use it in MOBILE!!!!!
+	</div>
 
 	<!-- Site Wrapper -->
 	<div class="site-wrapper">
@@ -136,14 +143,17 @@
 
 						<div class="project-create-button" onclick="open_title_section()">+</div>
 
-						<div class="project-title-write-style" id="project-title-write">
+						<div class="project-about-style" id="project-about-write">
 
-							<div class="project-title-write-content">
+							<div class="project-about-content">
 
 								<div class="close-button" onclick="close_title_section()">×</div>
 
 								<label for="title-place">Title</label>
 								<input type="text" class="title-place-style" id="title-place" placeholder="Title">
+
+								<label for="explain-place">Explain</label>
+								<input type="text" class="explain-place-style" id="explain-place" placeholder="Explain">
 
 								<input type="button" onclick="create_project('.project-list')" value="Create" class="create-active-button">
 
