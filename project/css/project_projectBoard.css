@@ -178,6 +178,10 @@
 		background-color: lightblue;
 	}
 
+	.project:hover {
+		cursor: pointer;
+	}
+
 	.project-title{
 		width: 70%;
 		float: none;

@@ -149,19 +149,29 @@
 
 								<div class="close-button" onclick="close_title_section()">×</div>
 
-								<label for="title-place">Title</label>
-								<input type="text" class="title-place-style" id="title-place" placeholder="Title">
+								<form action="./php/generate_project.php" method="POST" accept-charset="utf-8">
 
-								<label for="explain-place">Explain</label>
-								<input type="text" class="explain-place-style" id="explain-place" placeholder="Explain">
+									<label for="title-place">Title</label>
+									<input type="text" class="title-place-style" id="title-place" name="title-place" placeholder="Title (20)" required/>
 
-								<input type="button" onclick="create_project('.project-list')" value="Create" class="create-active-button">
+									<label for="explain-place">Description</label>
+									<input type="text" class="explain-place-style" id="explain-place" name="explain-place" placeholder="Description (45)"/>
+
+									<!--<input type="button" onclick="create_project('.project-list')" value="Create" class="create-active-button">-->
+									<input type="submit" value="Create" class="create-active-button"/>
+
+								</form>
 
 							</div>
 
 						</div>
 						
 					</li>
+
+					<!-- Projects Loading -->
+					<?php 
+						include('./php/load_projects.php');
+					?>
 
 				</ul>
 

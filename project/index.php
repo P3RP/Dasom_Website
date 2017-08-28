@@ -5,7 +5,7 @@
 <head>
 
 	<!-- Title -->
-	<title>Dasom | Project</title>
+	<title>Project | Dasom</title>
 
 	<!-- Meta Data -->
 	<meta charset="utf-8">
@@ -26,8 +26,8 @@
 
 		<!-- Nav -->
 		<div class="nav">
-			<a href="">Main</a>
-			<a href="">Community</a>
+			<a href="http://khuphj.iwinv.net/main/">Main</a>
+			<a href="http://khuphj.iwinv.net/wp/">Community</a>
 		</div>
 
 		<!-- Main Page -->
@@ -41,17 +41,22 @@
 			<!-- Login Section -->
 			<section class="login-section">
 
-				<div class="input-wrapper">
-					<input type="text" name="id" class="login-section-content" placeholder="Username">
-				</div>
+				<form action="../wp/wp-login.php" method="post">
 
-				<div class="input-wrapper">
-					<input type="text" name="password" class="login-section-content" placeholder="Password">
-				</div>
+					<div class="input-wrapper">
+						<input type="text" name="log" class="login-section-content" placeholder="Username" required>
+					</div>
 
-				<div class="">
-					<a type="button" class="btn btn-primary" href="./projectBoard.php">LOGIN</a>
-				</div>
+					<div class="input-wrapper">
+						<input type="password" name="pwd" class="login-section-content" placeholder="Password" spellcheck="false" autocomplete="off" required>
+					</div>
+
+					<div class="submit-wrapper">
+						<input type="submit" name="wp-submit" value="로그인" class="login-btn">
+					</div>
+
+				</form>
+
 			</section>
 
 		</div>
