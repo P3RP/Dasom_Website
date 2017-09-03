@@ -1,5 +1,11 @@
 <!-- index.php -->
 
+<?php 
+include_once('./php/login_check.php');
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -41,18 +47,18 @@
 			<!-- Login Section -->
 			<section class="login-section">
 
-				<form action="../wp/wp-login.php" method="post">
+				<form action="./../wp/wp-login.php" method="post" id="login-form">
 
 					<div class="input-wrapper">
-						<input type="text" name="log" class="login-section-content" placeholder="Username" required>
+						<input type="text" name="log" id="log" class="login-section-content" placeholder="Username" required>
 					</div>
 
 					<div class="input-wrapper">
-						<input type="password" name="pwd" class="login-section-content" placeholder="Password" spellcheck="false" autocomplete="off" required>
+						<input type="password" name="pwd" id="pwd" class="login-section-content" placeholder="Password" spellcheck="false" autocomplete="off" required>
 					</div>
 
 					<div class="submit-wrapper">
-						<input type="submit" name="wp-submit" value="로그인" class="login-btn">
+						<input type="submit" name="wp-submit" id="wp-submit" value="로그인" class="login-btn">
 					</div>
 
 				</form>
